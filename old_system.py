@@ -37,7 +37,9 @@ def run_system_monolith():
             new_div = input("Division: ")
             
            
-            n.append(new_name)
+            n.append(new_name) # Bug 4: Logic Error. Parallel list desync. Only name was appended, causing errors in other lists
+            r.append(new_rank)
+            d.append(new_div)
             print("Crew member added.")
             
         elif opt == "3":
