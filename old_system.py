@@ -10,9 +10,10 @@ def run_system_monolith():
     print("WELCOME TO FLEET COMMAND")
     
     
-    loading = 0
+    loading = 0. # Bug 1: Infinite Loop. "Loading" was never incremented
     while loading < 5:
         print("Loading module " + str(loading))
+        loading += 1 #Added increment to break loop
         
     
     while True:
