@@ -78,7 +78,7 @@ def run_system_monolith():
        
         if len(n) > 0:
             print("Database has entries.")
-        if len(n) == 0:
+        else: # Bug 8: Logic Error (redundant). Using second if statement is inefficient since previous statement catches all cases  greater than zero
             print("Database empty.")
 
         
