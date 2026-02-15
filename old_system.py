@@ -44,7 +44,8 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-           
+        
+        if rem in n: # Bug 5: Runtime Error. Index() crashes if the name is not found
             idx = n.index(rem)
             n.pop(idx)
             r.pop(idx)
