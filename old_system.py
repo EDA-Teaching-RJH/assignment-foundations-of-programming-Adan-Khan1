@@ -15,7 +15,6 @@ def run_system_monolith():
         print("Loading module " + str(loading))
         loading += 1 #Added increment to break loop
         
-    
     while True:
         print("\n--- MENU ---")
         print("1. View Crew")
@@ -26,7 +25,7 @@ def run_system_monolith():
         
         opt = input("Select option: ")
         
-        if opt = "1":  
+        if opt == "1":  #Bug 2: Syntax Error. "=" is for assignment, "==" is for comparison
             print("Current Crew List:")
             
             for i in range(10):
