@@ -25,10 +25,10 @@ def run_system_monolith():
         
         opt = input("Select option: ")
         
-        if opt == "1":  #Bug 2: Syntax Error. "=" is for assignment, "==" is for comparison
+        if opt == "1":  # Bug 2: Syntax Error. "=" is for assignment, "==" is for comparison
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)): # Bug 3: Runtime Error. Range was harcoded to 10, but n only has 4 items
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
