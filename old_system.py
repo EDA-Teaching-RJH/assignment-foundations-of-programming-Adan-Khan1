@@ -59,7 +59,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or  rank == "Commander": # Bug 6: Logical Error. Rank == "Captain" or "Commander" evaluates to True
                     count = count + 1
-            print("High ranking officers: " + count) 
+            print("High ranking officers: " + str(count)) # Bug 7: Type Error. The + cannot be used to join a string and an integer directly
             
         elif opt == "5":
             print("Shutting down.")
