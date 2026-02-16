@@ -81,3 +81,12 @@ def update_rank(names, ranks, ids):
         print("Error: ID not found.")
 
 
+# FEATURE 6: display_roster()
+def display_roster(names, ranks, divs, ids):
+
+    print(f"\n{'ID':<6} | {'Name':<20} | {'Rank':<15} | {'Division':<12}")
+    print("-" * 60)
+
+    for i in range(len(names)):
+        print(f"{ids[i]:<6} | {names[i]:<20} | {ranks[i]:<15} | {divs[i]:<12}")
+
