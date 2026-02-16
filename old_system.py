@@ -83,9 +83,8 @@ def run_system_monolith():
 
         
         fuel = 100
-        consumption = 0
-        while fuel > 0:
-            
+        consumption = 0 
+        while fuel > 0:  # Bug 9: Logic Error. This is a dead code. Fixed to ensure cycle finishes 
             print("Idling...")
             break 
             
