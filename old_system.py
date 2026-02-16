@@ -90,4 +90,4 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith
+run_system_monolith() # Bug 10: Logic Error. The function was defined but never called due to the misses parentheses.
