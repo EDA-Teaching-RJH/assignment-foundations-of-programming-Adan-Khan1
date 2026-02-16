@@ -136,3 +136,12 @@ def calculate_payroll(ranks):
             
     return total_cost 
 
+# FEATURE 10: count_officers()
+def count_officers(ranks):
+    officer_count = 0
+    for rank in ranks:
+        if rank == "Captain" or rank == "Commander":
+            officer_count += 1
+    return officer_count
+
+
