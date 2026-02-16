@@ -50,5 +50,18 @@ def add_member(names, ranks, divs, ids):
     ids.append(new_id)
     print(f"Successfully added {new_name} to the fleet.")
 
+# FEATURE 4: remove_member()
 
-    
+def remove_member(names, ranks, divs, ids):
+    target_id = input("Enter ID of the member to remove: ").strip()
+
+    if target_id in ids:
+        idx = ids.index(target_id)
+
+        names.pop(idx)
+        ranks.pop(idx)
+        divs.pop(idx)
+        ids.pop(idx)
+        print("Member records removed successfully.")
+    else:
+        print("Error: ID not found.")
