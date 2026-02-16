@@ -24,3 +24,31 @@ def display_menu(user_name):
 
     choice = input("Select an option: ")
     return choice
+
+# FEATURE 3: add_member()
+
+def add_member(names, ranks, divs, ids):
+    new_id = input("Enter new Member ID: ").strip()
+
+    if new_id in ids:
+        print("Error: This ID is already assigned to another member.")
+        return
+    
+    new_rank = input("Enter Rank (Captain/Commander/Lt. Commander/Lieutenant/Ensign): ").strip().title()
+
+    valid_tng_ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Ensign"]
+    if new_rank not in valid_tng_ranks:
+        print("Error: Invalid TNG rank provided.")
+        return
+
+    new_name = input("Enter Full Name: ").strip().title()
+    new_div = input("Enter Division (Command/Operations/Sciences): ").strip().title()
+
+    names.append(new_name)
+    ranks.append(new_rank)
+    divs.append(new_div)
+    ids.append(new_id)
+    print(f"Successfully added {new_name} to the fleet.")
+
+
+    
