@@ -105,3 +105,15 @@ def search_crew(names, ranks, divs, ids):
     
     if not found:
         print("No crew member found with that name.")
+
+
+# FEATURE 8: filter_by_division()
+def filter_by_division(names, divs):
+    target_div = input("Filter by (Command/Operations/Sciences): ").strip().title()
+    print(f"Crew in {target_div} Division:")
+
+    for i in range(len(names)):
+
+        match divs[i]:
+            case _ if divs[i] == target_div:
+                print(f"- {names[i]}")
