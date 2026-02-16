@@ -90,3 +90,18 @@ def display_roster(names, ranks, divs, ids):
     for i in range(len(names)):
         print(f"{ids[i]:<6} | {names[i]:<20} | {ranks[i]:<15} | {divs[i]:<12}")
 
+
+# FEATURE 7: search_crew()
+def search_crew(names, ranks, divs, ids):
+    search_term = input("Enter name or partial name to search: ").strip().lower()
+    print(f"Results for '{search_term}':")
+
+    found = False 
+
+    for i in range(len(names)):
+        if search_term in names[i].lower():
+            print(f"[{ids[i]}] {names[i]} - {ranks[i]} ({divs[i]})")
+            found = True
+    
+    if not found:
+        print("No crew member found with that name.")
