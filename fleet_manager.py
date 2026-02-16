@@ -117,3 +117,22 @@ def filter_by_division(names, divs):
         match divs[i]:
             case _ if divs[i] == target_div:
                 print(f"- {names[i]}")
+
+
+# FEATURE 9: calculate_payroll()
+def calculate_payroll(ranks):
+    total_cost = 0
+    for rank in ranks:
+        if rank == "Captain":
+            total_cost += 1000
+        elif rank == "Commander":
+            total_cost += 800
+        elif rank == "Lt. Commander":
+            total_cost += 600
+        elif rank == "Lieutenant":
+            total_cost += 400
+        else:
+            total_cost += 200
+            
+    return total_cost 
+
