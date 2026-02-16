@@ -144,4 +144,38 @@ def count_officers(ranks):
             officer_count += 1
     return officer_count
 
+# MAIN SYSTEM ORCHESTRATOR
 
+def main():
+    n_list, r_list, d_list, i_list = init_database()
+    current_user = input("Please enter your full name to log in: ").strip().title()
+
+    while True:
+        user_choice = display_menu(current_user)
+
+        if user_choice == "1":
+            display_roster(n_list, r_list, d_list, i_list)
+        elif user_choice == "2":
+            add_member(n_list, r_list, d_list, i_list)
+        elif user_choice == "3":
+            remove_member(n_list, r_list, d_list, i_list)
+        elif user_choice == "4":
+            update_rank(n_list, r_list, i_list)
+        elif user_choice == "5":
+            search_crew(n_list, r_list, d_list, i_list)
+        elif user_choice == "6":
+            filter_by_division(n_list, d_list)
+        elif user_choice == "7":
+            total = calculate_payroll(r_list)
+            print(f"Total Fleet Payroll: {total} Credits")
+        elif user_choice == "8":
+            officers = count_officers(r_list)
+            print(f"Total High Ranking Officers: {officers}")
+        elif user_choice == "9":
+            print("System Shutting Down. Live Long and Prosper.")
+            break
+        else:
+            print("Invalid selection. Please try again.")
+
+if __name__ == "__main__":
+    main()
