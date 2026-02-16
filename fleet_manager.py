@@ -65,3 +65,19 @@ def remove_member(names, ranks, divs, ids):
         print("Member records removed successfully.")
     else:
         print("Error: ID not found.")
+
+
+# FEATURE 5: update_rank()
+
+def update_rank(names, ranks, ids):
+    target_id = input("Enter ID to update rank: ").strip()
+
+    if target_id in ids:
+        idx = ids.index(target_id) # Find indexs
+        new_rank = input(f"Enter new rank for {names[idx]}: ").strip().title()
+        ranks[idx] = new_rank # Update rank strings
+        print("Rank updated.")
+    else:
+        print("Error: ID not found.")
+
+
